@@ -38,6 +38,7 @@ attributes:
     widget: select
     label: "Stata version"
     options:
+      - [ "Stata 16",  "stata/16.0-fasrc01" ]
       - [ "Stata 15",  "stata/15.0-fasrc01" ]
       - [ "Stata 14",  "stata/14.0-fasrc01" ]
 
