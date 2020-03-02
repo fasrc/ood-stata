@@ -5,6 +5,7 @@ attributes:
   desktop: "xfce"
   bc_num_slots: null
   bc_vnc_resolution:
+    value: "1024x768"
     required: true
   bc_account:
     help: "Only relevant if you have multiple slurm accounts. It can be left blank otherwise"
