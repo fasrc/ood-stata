@@ -1,6 +1,6 @@
 ---
 title: "Stata"
-cluster: "odyssey3"
+cluster: "fasse"
 attributes:
   desktop: "xfce"
   bc_num_slots: null
@@ -14,7 +14,7 @@ attributes:
     value: "04:00:00"
     widget: text_field
   bc_queue:
-    value: "shared"
+    value: "fasse"
   custom_email_address:
     label: email for status notification
     widget: text_field
