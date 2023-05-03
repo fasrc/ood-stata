@@ -47,6 +47,7 @@ attributes:
   stata_version:
     widget: select
     label: "Stata version"
+    help: "For **Rocky 8**, select Stata 17 as other versions are not available."
     options:
       - [ "Stata 17",  "stata/17.0-fasrc01" ]
       - [ "Stata 16",  "stata/16.0-fasrc01" ]
