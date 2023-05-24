@@ -28,7 +28,15 @@ cd $WORKDIR
   xfwm4 --compositor=off --sm-client-disable &
   xsetroot -solid "#D3D3D3"
   xfsettingsd --sm-client-disable --daemon
-  xfce4-panel --sm-client-disable &
+  (
+    # wait for the settings daemon to become available, or else the panel will not load its icons
+    while [ -z "$(dbus-send --session --dest=org.freedesktop.DBus --type=method_call --print-reply /org/freedesktop/DBus org.freedesktop.DBus.ListNames | grep -F \"org.xfce.SettingsDaemon\")" ]; do
+      sleep 1
+      set +x
+    done
+    set -x
+    xfce4-panel --sm-client-disable
+  ) &
 #) &
 
 
