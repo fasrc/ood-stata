@@ -40,7 +40,6 @@ attributes:
     value: 1
     min:   1
     step:  1
-    max:   64
     widget: number_field
     help: "Number of Cpus to allocate"
     help: |
@@ -69,6 +68,16 @@ attributes:
       Loads the [module](https://docs.rc.fas.harvard.edu/kb/modules-intro/) for the requested version
     options:
       - [ "Stata 17",  "stata/17.0-fasrc01" ]
+  extra_slurm:
+    label: Additional Slurm options
+    widget: text_field
+    help: |
+      additional slurm options (**long format option only**)<br>
+      Example :  --constraint=intel --exclusive
+
+      Please make sure the options you select are compatible with other fields in the form.<br>Also, please make sure you use **long format option only**<br>(e.g. --nodelist=holy7c24502 instead of -w holy7c24502)
+
+      If you are not familiar with Slurm we recommend to leave this blank.
 
 form:
   - desktop
@@ -84,3 +93,4 @@ form:
   - bc_email_on_started
   - custom_reservation
   - bc_account
+  - extra_slurm
