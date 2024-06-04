@@ -4,12 +4,11 @@
 module purge
 set -x
 
-export WORKDIR=/scratch/$USER/$SLURM_JOBID 
-mkdir -p $WORKDIR
+export STATATMP=/scratch/$USER/$SLURM_JOBID
+mkdir -p $STATATMP
 
 # Set working directory to home directory
-cd $WORKDIR
-
+cd $HOME
 #
 # Launch Xfce Window Manager and Panel
 #
