@@ -4,6 +4,8 @@
 module purge
 set -x
 
+export $(dbus-launch)
+
 export STATATMP=/scratch/$USER/$SLURM_JOBID
 mkdir -p $STATATMP
 
