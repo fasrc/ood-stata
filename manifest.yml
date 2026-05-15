@@ -7,4 +7,4 @@ description: |
   This app will launch [Stata] with GUI on [FAS-RC Cluster].
 
   [Stata]: https://www.stata.com
-  [FASSE Cluster]: https://www.rc.fas.harvard.edu/about/cluster-architecture/
+  [FAS-RC Cluster]: https://www.rc.fas.harvard.edu/services/cluster-computing/#Cannon
